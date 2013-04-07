@@ -25,6 +25,11 @@ describe GildedRose do
     (previous_quality - 2).should == current_quality
   end
 
+  it "should make the tickets worthless after their sellby date has passed" do
+      16.times {subject.update_quality}
+      0.should == subject.items[4].quality
+  end
+
 
 
 
