@@ -30,6 +30,11 @@ describe GildedRose do
       0.should == subject.items[4].quality
   end
 
+  it "should not allow negative item qualities" do
+    12.times {subject.update_quality}
+    subject.items[2].quality.should be > -1
+  end
+
 
 
 
