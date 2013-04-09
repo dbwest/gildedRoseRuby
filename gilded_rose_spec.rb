@@ -67,4 +67,8 @@ describe GildedRose do
       sellby_new = subject.items[4].sell_in
       sellby_new.should equal (sellby_old - 1)
   end
+
+  it "should make conjured items degrade twice as fast" do
+      pending
+  end
 end
