@@ -6,8 +6,12 @@ class LimitedItem < Item
     end
 
     def update_quality
-        unless sell_in <= 0
+        if (@sell_in > 10)
             @quality += 1
+        elsif (@sell_in <= 10 && @sell_in > 5)
+            @quality += 2
+        elsif (@sell_in <= 5 && @sell_in > 0)
+            @quality += 3
         else
             @quality = 0
         end

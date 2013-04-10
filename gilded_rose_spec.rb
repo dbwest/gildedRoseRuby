@@ -30,6 +30,18 @@ describe GildedRose do
       0.should == subject.items[4].quality
   end
 
+  it "should change tickets quality +3 if sell_in 1-5 days" do
+      11.times { subject.update_quality }
+      subject.items[4].quality.should == 38
+  end
+  
+  it "should change tickets quality +2 if sell_in 6-10 days" do
+      6.times {subject.update_quality}
+      subject.items[4].quality.should == 27
+  end
+
+
+
   it "should not allow negative item qualities" do
     12.times {subject.update_quality}
     subject.items[2].quality.should be > -1
