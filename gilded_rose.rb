@@ -1,5 +1,4 @@
 require './item.rb'
-require './item2.rb'
 require './regular_item.rb'
 require './vintage_item.rb'
 require './legendary_item.rb'
