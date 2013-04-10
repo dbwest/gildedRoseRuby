@@ -6,7 +6,11 @@ class ConjuredItem < Item
     end
 
     def update_quality
-        @quality -= 2
+        unless @quality < 2
+            @quality -= 2
+        else
+            @quality = 0
+        end
         @sell_in -= 1
     end
 

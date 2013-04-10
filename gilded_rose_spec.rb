@@ -69,6 +69,15 @@ describe GildedRose do
   end
 
   it "should make conjured items degrade twice as fast" do
-      pending
+      quality_old = subject.items[5].quality
+      subject.update_quality
+      quality_new = subject.items[5].quality
+      quality_new.should equal (quality_old-2)
   end
+
+  it "should not let conjured item quality be negative" do
+      20.times {subject.update_quality}
+      subject.items[5].quality.should be >= 0
+  end
+
 end
