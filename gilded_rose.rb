@@ -1,9 +1,9 @@
 require './item.rb'
-require './regular_item.rb'
-require './vintage_item.rb'
-require './legendary_item.rb'
-require './limited_item.rb'
-require './conjured_item.rb'
+require './item_types/regular_item.rb'
+require './item_types/vintage_item.rb'
+require './item_types/legendary_item.rb'
+require './item_types/limited_item.rb'
+require './item_types/conjured_item.rb'
 
 class GildedRose
 
