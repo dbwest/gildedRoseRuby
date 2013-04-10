@@ -19,6 +19,10 @@ class GildedRose
 
   def update_quality
 
+    @items.each do |i|
+        print i.to_yaml
+    end
+
     for i in 0..(@items.size-1)
       if (@items[i].name != "Aged Brie" && @items[i].name != "Backstage passes to a TAFKAL80ETC concert")
         if (@items[i].quality > 0)
